@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Karishmaa 🎉</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffccff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 40px;
+            color: #ff1493;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0px 0px 20px pink;
+            margin-top: 20px;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff1493;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: fall 4s linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Birthday Janna Mere Kutchu Puchu ❤️❤️</h1>
+    <img src="Phone/Documents/IMG_20250211_113209.jpg"   
+    <audio autoplay loop>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.className = "confetti";
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+                document.body.appendChild(confetti);
+            }
+        }
+        createConfetti();
+    </script>
+
+</body>
+</html>
